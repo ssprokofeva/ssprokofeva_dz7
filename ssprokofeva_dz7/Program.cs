@@ -8,7 +8,7 @@ namespace ssprokofeva_dz7
 {
     namespace Program 
     {
-        // Базовый класс сотрудника
+         
         abstract class Employee
         {
             protected string Name;
@@ -43,7 +43,7 @@ namespace ssprokofeva_dz7
             }
         }
 
-        // Генеральный директор
+         
         class CEO : Employee
         {
             public CEO(string name) : base(name) { }
@@ -54,7 +54,7 @@ namespace ssprokofeva_dz7
             }
         }
 
-        // Финансовый директор
+         
         class FinancialDirector : Employee
         {
             public FinancialDirector(string name) : base(name) { }
@@ -65,7 +65,7 @@ namespace ssprokofeva_dz7
             }
         }
 
-        // Директор по автоматизации
+         
         class AutomationDirector : Employee
         {
             public AutomationDirector(string name) : base(name) { }
@@ -76,7 +76,7 @@ namespace ssprokofeva_dz7
             }
         }
 
-        // Начальник отдела информационных технологий
+         
         class ITDepartmentHead : Employee
         {
             public ITDepartmentHead(string name) : base(name) { }
@@ -87,7 +87,7 @@ namespace ssprokofeva_dz7
             }
         }
 
-        // Заместитель начальника отдела информационных технологий
+         
         class DeputyITDepartmentHead : Employee
         {
             public DeputyITDepartmentHead(string name) : base(name) { }
@@ -98,7 +98,7 @@ namespace ssprokofeva_dz7
             }
         }
 
-        // Главный бухгалтер
+        
         class ChiefAccountant : Employee
         {
             public ChiefAccountant(string name) : base(name) { }
@@ -109,7 +109,7 @@ namespace ssprokofeva_dz7
             }
         }
 
-        // Разработчик
+         
         class Developer : Employee
         {
             public Developer(string name) : base(name) { }
@@ -120,7 +120,7 @@ namespace ssprokofeva_dz7
             }
         }
 
-        // Системщик
+        
         class SysAdmin : Employee
         {
             public SysAdmin(string name) : base(name) { }
@@ -135,7 +135,7 @@ namespace ssprokofeva_dz7
         {
             static void Main(string[] args)
             {
-                // Создаем иерархию компании
+                 
                 CEO timur = new CEO("Тимур");
                 FinancialDirector rashid = new FinancialDirector("Рашид");
                 AutomationDirector oIlkham = new AutomationDirector("О Ильхам");
@@ -152,7 +152,7 @@ namespace ssprokofeva_dz7
                 SysAdmin vita = new SysAdmin("Витя");
                 SysAdmin zhenja = new SysAdmin("Женя");
 
-                // Устанавливаем связи подчинения
+                 
                 timur.AddSubordinate(rashid);
                 timur.AddSubordinate(oIlkham);
                 rashid.AddSubordinate(lukas);
@@ -168,7 +168,7 @@ namespace ssprokofeva_dz7
                 volodja.AddSubordinate(vita);
                 volodja.AddSubordinate(zhenja);
 
-                // Передача задач
+                 
                 timur.AssignTask(rashid, "Автоматизация бухгалтерского учета");
                 rashid.AssignTask(lukas, "Проверить отчетность за прошлый квартал");
                 oIlkham.AssignTask(orkadiy, "Разработать новую систему мониторинга сети");
